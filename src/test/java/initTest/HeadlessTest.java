@@ -18,7 +18,7 @@ public class HeadlessTest {
 
     @Test
     public void HeadlessChromeDriverTest(){
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_3");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
 
