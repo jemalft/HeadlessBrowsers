@@ -1,0 +1,11 @@
+.idea
+target
+.allure
+.DS_Store
+allure-results
+
+*.iml
+# Log file
+*.log
+ Package Files #
+ *.jar
