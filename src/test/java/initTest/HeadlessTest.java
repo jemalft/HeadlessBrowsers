@@ -40,7 +40,7 @@ public class HeadlessTest {
 
     @Test
     public void headlessFirefoxDriverTest(){
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/geckodriver");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/geckodriver_3");
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         firefoxOptions.addArguments("--headless");
         WebDriver driver = new FirefoxDriver(firefoxOptions);
