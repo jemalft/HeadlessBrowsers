@@ -39,6 +39,10 @@ RUN mv -f ~/selenium-server-standalone-$SELENIUM_STANDALONE_VERSION.jar /usr/loc
 RUN chown root:root /usr/local/bin/selenium-server-standalone.jar
 RUN chmod 0755 /usr/local/bin/selenium-server-standalone.jar
 
+#=========
+# Firefox
+#=========
+RUN apt-get update && apt-get install -y iceweasel
 
 # GeckoDriver v0.19.1
 RUN wget -q "https://github.com/mozilla/geckodriver/releases/download/v0.19.1/geckodriver-v0.19.1-linux64.tar.gz" -O /tmp/geckodriver.tgz \

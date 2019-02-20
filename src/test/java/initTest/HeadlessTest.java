@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.Assert;
@@ -40,10 +41,12 @@ public class HeadlessTest {
 
     @Test
     public void headlessFirefoxDriverTest(){
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/geckodriver_3");
+       // System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/geckodriver");
         FirefoxOptions firefoxOptions = new FirefoxOptions();
         firefoxOptions.addArguments("--headless");
         WebDriver driver = new FirefoxDriver(firefoxOptions);
+        // options
+
         driver.get("https://www.avenuecode.com/");
         String actualTitle = driver.getTitle();
 
