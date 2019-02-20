@@ -21,6 +21,8 @@ public class HeadlessTest {
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_3");
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--headless");
+        chromeOptions.addArguments("--no-sandbox");
+        chromeOptions.addArguments("--disable-dev-shm-usage");
 
         WebDriver driver = new ChromeDriver(chromeOptions);
         driver.navigate().to("https://www.avenuecode.com/");
